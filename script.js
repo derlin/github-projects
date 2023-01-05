@@ -64,7 +64,7 @@ const displayRepos = function (repos) {
     for (const repo of repos) {
         if (repo.fork || !repo.description) continue;
         let listItem = document.createElement('li');
-        if (repo.homepage) repo.homepage = `<a class="homepage" href="${repo.homepage}" target="_blank">homepage</a>`;
+        if (repo.homepage) repo.homepage = `<a class="homepage" href="${repo.homepage}" target="_blank">Home Page</a>`;
         listItem.classList.add('repo');
         listItem.innerHTML = `
             <h3>${repo.name}</h3>
