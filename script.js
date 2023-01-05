@@ -32,7 +32,7 @@ const displayProfile = function (profile) {
     <div>
         <h2><a href=${profile.blog}><strong>${profile.name}</strong></a></h2>
         <strong>@${profile.login} </strong>
-        <p>${profile.bio}</p>
+        <p>${profile.bio || "<i>bio not found</i>"}</p>
         <p>
             Repos: ${profile.public_repos} /
             Gists: ${profile.public_gists}
@@ -68,7 +68,7 @@ const displayRepos = function (repos) {
         listItem.classList.add('repo');
         listItem.innerHTML = `
             <h3>${repo.name}</h3>
-            <p>${repo.description}</p> 
+            <p>${repo.description} <span class="year">(${repo.created_at.substr(0,4)})</span></p> 
             <span>${devicons[repo.language] || ""} ${repo.language || ""}</span>
             ${repo.homepage ?? ""}
             <a class="view" href=${repo.html_url} target="_blank">View Project</a>`;

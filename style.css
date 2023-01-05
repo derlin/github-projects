@@ -55,20 +55,6 @@ h1 {
   margin-bottom: 4px;
 }
 
-small {
-  width: 100%;
-  text-align: center;
-  display: block;
-  margin-bottom: 20px;
-}
-
-/* h2 {
-    width: 100%;
-    text-align: center;
-    color: var(--text);
-    margin: 0;
-} */
-
 a {
   color: var(--accent);
   text-decoration: none;
@@ -232,23 +218,29 @@ h3 {
 }
 
 .repo-list li a.homepage {
-    margin-bottom: 4px;
-    background: var(--bg-button);
-    color: var(--text-button);
+  margin-bottom: 4px;
+  background: var(--bg-button);
+  color: var(--text-button);
 }
 
 .repo-list li a:hover {
   background: var(--accent);
   color: var(--text-button);
 }
+
 .repo-list p {
   font-size: 0.8em;
   max-width: 90%;
   color: #727272;
   margin-top: 0;
 }
-.repo-list span {
+.repo-list li > span {
   margin-bottom: 0.8em;
+}
+
+.repo-list li .year {
+  font-size: 0.8em;
+  color: var(--accent);
 }
 
 @media (min-width: 700px) {
